@@ -1,0 +1,51 @@
+<div class="form-container">
+<div>
+	<a href="#/main/ticket">Add Ticket</a>
+</div>
+<table style="width:100%"  border="1">
+	<tr>
+		<td>
+			Title
+		</td>
+		<td>
+			Category
+		</td>
+		<td>
+			Priority
+		</td>
+		<td>
+			Status
+		</td>
+		<td>
+			Agent
+		</td>
+		<td>
+			Action
+		</td>
+	</tr>
+	<tr ng-repeat="item in ticketList">
+		<td>
+			{{item.ticketTitle}}
+		</td>
+		<td>
+			{{item.category.name}}
+		</td>
+		<td>
+			{{item.priority.priority}}
+		</td>
+
+		<td>
+			{{item.status.status}}
+		</td>
+		<td>
+			{{item.agent.name}}
+		</td>
+		<td>
+			<a href="#/main/ticketupdate/{{item._id}}">Edit Ticket</a>
+		</td>
+	</tr>
+</table>
+
+</div>
+
+</div>

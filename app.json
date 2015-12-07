@@ -1,0 +1,5 @@
+{
+  "name": "Redticket on Heroku",
+  "description": "A Rest Server in PLAY scala",
+  "image": "heroku/scala"
+}

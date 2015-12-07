@@ -1,0 +1,31 @@
+<!--The Hamburger Button in the Header-->
+    <header>
+        <span class="header-text">Login</span>
+    </header>
+
+    <!--The Layer that will be layed over the content
+    so that the content is unclickable while menu is shown-->
+    <div id="contentLayer"></div>
+
+    <!--The content of the site-->
+    <div id="content">
+        <!-- Login Page -->
+        <div class="form-container">
+        
+        <div class="login-form">
+
+            <div class="form-group">
+                <span>Email</span>
+                <input ng-model="email" placeholder="Enter Email">
+            </div>
+            
+            
+            <div class="form-group">
+                <input type="submit" value="login" ng-click="onLogin()">
+            </div>
+        
+        </div>
+        
+        
+        </div>
+</div>

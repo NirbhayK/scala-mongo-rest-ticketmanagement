@@ -1,0 +1,102 @@
+<div class="form-container">
+
+	<table style="width:100%">
+		<tr>
+			<td>
+				Category
+			</td>
+			<td>
+				<select ng-model="selectedCategory">
+					<option value="">Select</option>
+					<option ng-selected="{{item._id == selectedCategory}}"  ng-repeat="item in categories" value="{{item._id}}">{{item.name}}</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Priority
+			</td>
+			<td>
+				<select ng-model="selectedPriority">
+					<option value="">Select</option>
+					<option ng-selected="{{item._id == selectedPriority}}" ng-repeat="item in priorities" value="{{item._id}}">{{item.priority}}</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Customer Name
+			</td>
+			<td>
+				<input ng-model="customerName">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Customer Email
+			</td>
+			<td>
+				<input ng-model="customerEmail">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Title
+			</td>
+			<td>
+				<input ng-model="ticketTitle">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Description
+			</td>
+			<td>
+				<input ng-model="ticketDescription">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Status
+			</td>
+			<td>
+				<select ng-model="selectedStatus">
+					<option value="">Select</option>
+					<option ng-selected="{{item._id == selectedStatus}}"  ng-repeat="item in statusesticket" value="{{item._id}}">{{item.status}}</option>
+				</select>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td>
+				Assign to
+			</td>
+			<td>
+				<select ng-model="selectedAgent">
+					<option value="">Select</option>
+					<option ng-selected="{{item._id == selectedAgent}}" ng-repeat="item in agents" value="{{item._id}}">{{item.name}}</option>
+				</select>
+			</td>
+		</tr>
+
+
+
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="Submit" ng-click="onSubmit()">
+			</td>
+		</tr>
+
+	</table>
+    <br/><br/>
+   <div><span><u>Comments Area :</u></span><br/><br/><br/>
+       <div ng-repeat="item in comments"> {{item.commentBy}} Says -> {{item.comment}}  <hr></div>
+
+       <input ng-model="comment">
+       <input type="submit" value="Add Comment" ng-click="onComment()">
+   </div>
+</div>
+
+</div>
