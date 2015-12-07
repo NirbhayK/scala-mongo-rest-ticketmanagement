@@ -1,4 +1,17 @@
-This is your new Play application
+This is Ticket Management System
 =================================
+
+This simple ticket management usage following tech.
+
+- Scala
+- Play Framework
+- REST API written in Scala
+- Mongo DB
+- ReactiveMongo driver
+- Angular JS
+
+To run try - `activator ~run`
+
+Please change conf/applicaiton.conf mongodb uri to get it work.
 
 This file will be packaged with your application, when using `activator dist`.
